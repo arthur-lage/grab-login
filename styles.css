@@ -17,7 +17,7 @@ html {
 
 body {
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 main {
@@ -52,10 +52,33 @@ main .form-wrapper form {
 
 main .form-wrapper form .input-field {
   width: 100%;
+}
+
+main .form-wrapper form .input-field .input-container {
+  width: 100%;
   position: relative;
 }
 
-main .form-wrapper form .input-field ion-icon {
+main .form-wrapper form .input-field.error .input-container ion-icon {
+  color: var(--red);
+}
+
+main .form-wrapper form .input-field.error .input-container input {
+  border-color: var(--red);
+}
+
+main .form-wrapper form .input-field .error-message {
+  margin: 1rem 0;
+  color: var(--gray);
+  font-size: 1.5rem;
+  display: none;
+}
+
+main .form-wrapper form .input-field.error .error-message {
+  display: block;
+}
+
+main .form-wrapper form .input-field .input-container ion-icon {
   position: absolute;
   left: 1.5rem;
   font-size: 2rem;
@@ -64,7 +87,7 @@ main .form-wrapper form .input-field ion-icon {
   color: #fff;
 }
 
-main .form-wrapper form .input-field input {
+main .form-wrapper form .input-field .input-container input {
   border-radius: 50rem;
   outline: none;
   padding: 1rem;
@@ -74,6 +97,11 @@ main .form-wrapper form .input-field input {
   font-size: 1.7rem;
   background: transparent;
   border: 2px solid #fff;
+}
+
+main .form-wrapper form .input-field .input-container input::placeholder {
+    color: var(--gray);
+    opacity: .8;
 }
 
 main .form-wrapper form button {

@@ -28,13 +28,35 @@
       <div class="form-wrapper">
         <img src="./assets/logo-grab.svg" alt="Logo da grab" />
         <form>
-          <div class="input-field">
-            <ion-icon name="at-outline"></ion-icon>
-            <input type="email" id="email" name="email" />
+          <div id="email-field" class="input-field">
+            <div class="input-container">
+              <ion-icon name="at-outline"></ion-icon>
+              <input
+                autocomplete="off"
+                placeholder="example@example.com"
+                type="text"
+                id="email"
+                name="email"
+              />
+            </div>
+            <label class="error-message" for="password"
+              >Por favor, insira um email válido.</label
+            >
           </div>
-          <div class="input-field">
-            <ion-icon name="lock-closed-outline"></ion-icon>
-            <input type="password" id="password" name="password" />
+          <div id="password-field" class="input-field">
+            <div class="input-container">
+              <ion-icon name="lock-closed-outline"></ion-icon>
+              <input
+                autocomplete="off"
+                placeholder="examplepassword123"
+                type="password"
+                id="password"
+                name="password"
+              />
+            </div>
+            <label class="error-message" for="password"
+              >Por favor, insira uma senha válida.</label
+            >
           </div>
           <button type="submit">Entrar</button>
         </form>
@@ -51,5 +73,7 @@
         alt="Duas pessoas no meio de uma entrevista dando as mãos"
       />
     </main>
+
+    <script src="./main.js"></script>
   </body>
 </html>
